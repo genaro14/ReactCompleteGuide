@@ -45,6 +45,8 @@
 import React, { useState } from 'react';
 
 import './ExpenseForm.css';
+import './NewExpense.css';
+
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -82,6 +84,20 @@ const ExpenseForm = (props) => {
     setEnteredAmount('');
     setEnteredDate('');
   };
+  let [showForm, setShowForm] = useState(false);
+  const formToggleHandler = () => {
+    setShowForm(!showForm);
+  }
+
+ if (!showForm) {
+  console.log('Mostrar boton');
+  return (
+      <div className="new-expense">
+        <button onClick={formToggleHandler} type="button">Añadir Gasto</button>
+        
+      </div>
+    )   
+}
 
   return (
     <form onSubmit={submitHandler}>
@@ -117,6 +133,7 @@ const ExpenseForm = (props) => {
       </div>
       <div className='new-expense__actions'>
         <button type='submit'>Añadir</button>
+        <button onClick={formToggleHandler} type="button">Cancelar</button>
       </div>
     </form>
   );
