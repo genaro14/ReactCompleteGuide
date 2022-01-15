@@ -6,8 +6,8 @@ import './App.css';
 
 const App = () => {
   const [courseGoals, setCourseGoals] = useState([
-    { text: 'Do all exercises!', id: 'g1' },
-    { text: 'Finish the course!', id: 'g2' }
+    { text: 'Hacer ejercicios!', id: 'g1' },
+    { text: 'Finalizar el curso!', id: 'g2' }
   ]);
 
   const addGoalHandler = enteredText => {
@@ -26,7 +26,7 @@ const App = () => {
   };
 
   let content = (
-    <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
+    <p style={{ textAlign: 'center', fontWeight: 'bold' }}>Sin tareas para hacer? Agrega una tarea</p>
   );
 
   if (courseGoals.length > 0) {
@@ -47,7 +47,7 @@ const App = () => {
             items={courseGoals}
             onDeleteItem={deleteItemHandler}
           />
-        ) // <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
+        ) // <p style={{ textAlign: 'center' }}>Sin tareas para hacer? Agrega una tarea</p>
         } */}
       </section>
     </div>
