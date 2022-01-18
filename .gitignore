@@ -43,6 +43,8 @@ Expenses/node_modules/
 Proyect2/node_modules/
 Proyect3_User_List/node_modules/
 Proyect4_Login_Dummy/node_modules/
+Debugging/node_modules/
+Proyect5_UseReducer/node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
