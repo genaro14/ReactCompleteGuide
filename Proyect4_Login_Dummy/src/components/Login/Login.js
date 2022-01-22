@@ -16,9 +16,9 @@ const Login = (props) => {
     return () => {
       console.log('EFFECT CLEANUP')
     };
-  },[]); // sin parametros se ejecuta una sola vez
+  },[]); // sin parametros se ejecuta una sola vez 
   
-  useEffect(() => { // CLEANER LOGIN SAMPLE WITH EFFECT
+  /* useEffect(() => { // CLEANER LOGIN SAMPLE WITH EFFECT
     const identifier = setTimeout(() => {
       console.log('checking form validity')
       setFormIsValid(
@@ -30,7 +30,7 @@ const Login = (props) => {
       console.log('CLEANUP CALL');
       clearTimeout(identifier);
     };
-  }, [enteredEmail, enteredPassword]);
+  }, [enteredEmail, enteredPassword]); */
 
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
